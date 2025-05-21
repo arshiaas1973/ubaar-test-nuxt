@@ -1,6 +1,5 @@
 <script setup>
 const route = useRoute();
-console.log(route);
 </script>
 <template>
     <header class="app">
@@ -39,12 +38,14 @@ header.app {
         0 1px 2px -1px rgb(0 0 0 / 0.1);
     background: #f7f7f7;
     box-sizing: border-box;
+    transition: all linear 0.2s;
 }
 header.app section.left {
     column-gap: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: all linear 0.2s;
 }
 header.app section.left span {
     padding: 0 15px;
@@ -55,5 +56,15 @@ header.app section.left span {
 }
 header.app section.left span.active {
     color: var(--text-color);
+}
+@media only screen and (max-width: 600px) {
+    header.app {
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 410px) {
+    header.app section.left {
+        column-gap: 0px;
+    }
 }
 </style>
