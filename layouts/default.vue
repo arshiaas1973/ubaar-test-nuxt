@@ -6,5 +6,13 @@ useHead({
 </script>
 <template>
     <AppHeader />
-    <slot />
+    <main>
+        <slot />
+    </main>
 </template>
+<style lang="scss" scoped>
+main {
+    margin: 105px auto 0 auto;
+    max-width: 800px;
+}
+</style>

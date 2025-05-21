@@ -58,7 +58,7 @@ div.box div {
     flex-direction: column;
     flex-basis: calc(1 / 3 * (100% - 2 * 10px));
     row-gap: 5px;
-    font-family: Vasir;
+    font-family: Vazir;
     transition: all linear 0.2s;
 }
 div.box div h2 {

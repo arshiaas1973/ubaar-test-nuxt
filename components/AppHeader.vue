@@ -1,4 +1,5 @@
 <script setup>
+// import Link from "#imports";
 const route = useRoute();
 </script>
 <template>
@@ -13,12 +14,17 @@ const route = useRoute();
             />
         </section>
         <section class="left">
-            <span :class="{ active: route.fullPath.split('/')[1] == 'add' }"
-                >ثبت آدرس</span
+            <NuxtLink
+                :href="route.fullPath.split('/')[1] == 'add' ? '#' : '/add'"
+                :class="{ active: route.fullPath.split('/')[1] == 'add' }"
             >
-            <span :class="{ active: route.fullPath.split('/')[1].length == 0 }"
-                >مشاهده آدرس ها</span
-            >
+                ثبت آدرس
+            </NuxtLink>
+            <NuxtLink
+                :href="route.fullPath.split('/')[1].length == 0 ? '#' : '/'"
+                :class="{ active: route.fullPath.split('/')[1].length == 0 }"
+                >مشاهده آدرس ها
+            </NuxtLink>
         </section>
     </header>
 </template>
@@ -47,14 +53,14 @@ header.app section.left {
     align-items: center;
     transition: all linear 0.2s;
 }
-header.app section.left span {
+header.app section.left a {
     padding: 0 15px;
-    font-family: Vasir;
+    font-family: Vazir;
     font-size: 14px;
     font-weight: bold;
     color: var(--primary-color);
 }
-header.app section.left span.active {
+header.app section.left a.active {
     color: var(--text-color);
 }
 @media only screen and (max-width: 600px) {
