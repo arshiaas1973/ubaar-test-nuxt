@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
+  compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
-  modules: ['@nuxt/icon', '@nuxt/image', '@nuxt/ui']
-})
+  modules: ["@nuxt/icon", "@nuxt/image", "@nuxt/ui"],
+  css: ["~/public/assets/css/globals.scss"],
+});

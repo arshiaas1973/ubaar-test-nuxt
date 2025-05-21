@@ -1,0 +1,35 @@
+@use "variables.scss";
+
+body,
+html,
+__nuxt {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: var(--background);
+}
+
+@font-face {
+    src: url("../fonts/Vazir-Thin-FD-WOL.woff2");
+    font-family: Vasir;
+    font-weight: 100;
+}
+@font-face {
+    src: url("../fonts/Vazir-Light-FD-WOL.woff2");
+    font-family: Vasir;
+    font-weight: 300;
+}
+@font-face {
+    src: url("../fonts/Vazir-FD-WOL.woff2");
+    font-family: Vasir;
+    font-weight: normal;
+}
+@font-face {
+    src: url("../fonts/Vazir-Bold-FD-WOL.woff2");
+    font-family: Vasir;
+    font-weight: bold;
+}
+@font-face {
+    src: url("../fonts/Vazir-Medium-FD-WOL.woff2");
+    font-family: Vasir;
+    font-weight: 500;
+}
